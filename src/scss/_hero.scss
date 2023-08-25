@@ -1,0 +1,58 @@
+.hero {
+    padding-top: 56px;
+    &-wrapper {
+        @include flexbox($direction: column, $justify: unset, $align: unset);
+        gap: 64px;
+    }
+    &-top {
+        .heading-content {
+            @include flexbox($justify: space-between, $align: flex-end);
+
+            .desc-text {
+                font-size: 20px;
+                max-width: 358px;
+            }
+        }
+    }
+    &-bottom {
+        .img-hero {
+            max-width: 1344px;
+        }
+    }
+
+    @include responsive(dekstop) {
+        &-top {
+            .heading-content {
+                .desc-text {
+                    font-size: 18px;
+                    max-width: 316px;
+                }
+            }
+        }
+    }
+
+    @include responsive(tablet) {
+        &-wrapper {
+            gap: 40px;
+        }
+        .heading-content {
+            @include flexbox($direction: column, $align: flex-start);
+            gap: 16px;
+        }
+    }
+
+    @include responsive(mobile) {
+        padding-block: 36px;
+        &-wrapper {
+            gap: 32px;
+        }
+        .heading-content {
+            @include flexbox($direction: column, $align: flex-start);
+            gap: 12px;
+            .desc-text {
+                font-size: 16px;
+                max-width: unset;
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.why {
+    padding-block: 64px;
+    &-wrapper {
+        @include flexbox($direction: column, $justify: unset, $align: unset);
+        gap: 64px;
+        .item {
+            padding-bottom: 32px;
+            &:not(:last-child) {
+                border-bottom: 1px solid $color-black;
+            }
+        }
+        .card {
+            @include flexbox($align: flex-start);
+            .heading-content {
+                .desc-text {
+                    max-width: 878px;
+                }
+            }
+        }
+    }
+
+    @include responsive(dekstop) {
+        &-wrapper {
+            .card {
+                .heading-content {
+                    .desc-text {
+                        max-width: 635px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(tablet) {
+        &-wrapper {
+            .card {
+                @include flexbox($direction: column, $align: flex-start);
+                gap: 20px;
+
+                .heading-content {
+                    .heading-text {
+                        margin-bottom: 16px;
+                    }
+                    .desc-text {
+                        max-width: unset;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(mobile) {
+        padding-block: 44px;
+    }
+}

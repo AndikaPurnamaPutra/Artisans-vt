@@ -1,0 +1,159 @@
+.description {
+    background-color: $color-black;
+    padding-block: 64px;
+    &-wrapper {
+        @include flexbox($direction: column, $justify: unset, $align: unset);
+        gap: 64px;
+    }
+    &-top {
+        width: 100%;
+        border-bottom: 1px solid $color-white;
+        padding-bottom: 32px;
+        .heading-content {
+            @include flexbox($justify: unset);
+            .heading-text-small {
+                color: $color-white;
+                &:nth-child(1) {
+                    margin-right: 178px;
+                }
+                &:nth-child(2) {
+                    margin-right: 534px;
+                }
+            }
+        }
+    }
+    &-bottom {
+        @include flexbox($align: flex-start);
+        position: relative;
+
+        .heading-text-md {
+            color: $color-white;
+        }
+        .slider-description {
+            max-width: 83.3%;
+            .item {
+                flex-shrink: 0;
+                margin-inline: 28px;
+
+                &:nth-child(1) {
+                    margin-left: unset;
+                }
+            }
+            .card {
+                width: 100%;
+                @include flexbox($align: unset, $justify: unset);
+                gap: 20px;
+                &-img {
+                    max-width: 543px;
+                }
+
+                &-body {
+                    .card-title {
+                        color: $color-white;
+                        margin-bottom: 24px;
+                    }
+                    .card-desc {
+                        color: $color-white;
+                        max-width: 399px;
+                    }
+                }
+            }
+        }
+        .wrap-btn {
+            position: absolute;
+            bottom: 0;
+            right: 278px;
+        }
+    }
+
+    @include responsive(dekstop) {
+        &-top {
+            .heading-content {
+                .heading-text-small {
+                    color: $color-white;
+                    &:nth-child(1) {
+                        margin-right: 110px;
+                    }
+                    &:nth-child(2) {
+                        margin-right: 324px;
+                    }
+                }
+            }
+        }
+        &-bottom {
+            .slider-description {
+                .item {
+                    .card {
+                        gap: 10px;
+                        &-img {
+                            max-width: 354px;
+                        }
+                    }
+                }
+            }
+            .wrap-btn {
+                right: 0;
+            }
+        }
+    }
+
+    @include responsive(tablet) {
+        &-bottom {
+            @include flexbox($direction: column, $align: flex-start);
+            gap: 40px;
+
+            .slider-description {
+                max-width: 100%;
+
+                .card {
+                    &-body {
+                        .card-desc {
+                            max-width: 362px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(mobile) {
+        padding-block: 44px;
+        &-top {
+            .heading-content {
+                .heading-text-small {
+                    color: $color-white;
+                    &:nth-child(1) {
+                        margin-right: 40px;
+                    }
+                    &:nth-child(2) {
+                        margin-right: 40px;
+                    }
+                }
+            }
+        }
+        &-bottom {
+            .slider-description {
+                .card {
+                    @include flexbox($direction: column, $align: flex-start);
+
+                    &-img {
+                        max-width: 333px;
+                    }
+
+                    &-body {
+                        .card-title {
+                            margin-bottom: 16px;
+                        }
+                    }
+                }
+            }
+
+            .wrap-btn {
+                position: relative;
+                right: 0;
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    }
+}
