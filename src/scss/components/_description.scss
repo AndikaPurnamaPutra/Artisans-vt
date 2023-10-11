@@ -1,19 +1,24 @@
 .section-description {
 	.container {
 		&-description {
-            padding-block: 64px;
+			padding-block: 64px;
 			flex-direction: column;
-            gap: 56px;
+			gap: 56px;
 			@include responsive(sm) {
 				padding-block: 32px;
 				gap: 32px;
 			}
 			.head-content {
-                border-bottom: 1px solid #ffffff;
+				border-bottom: 1px solid #ffffff;
 				.subtext-text {
 					display: flex;
 					align-items: flex-start;
-                    margin-bottom: 32px;
+					margin-bottom: 32px;
+					@include responsive(md) {
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+					}
 					&-subtitle {
 						color: #fff;
 						font-family: $font-body;
@@ -21,35 +26,32 @@
 						font-weight: 700;
 						line-height: 130%; /* 31.2px */
 						letter-spacing: -0.72px;
-                        &:nth-child(1) {
-							margin-right: 206px;
+						&:nth-child(1) {
+							margin-right: 180px;
 							@include responsive(xl) {
-								margin-right: 138px;
+								margin-right: 115px	;
 							}
 							@include responsive(md) {
-								width: 100%;
 								margin-right: 0;
-								display: flex;
-								justify-content: space-between;
 							}
-                        }
-                        &:nth-child(2) {
-                            margin-right: 504px;
+						}
+						&:nth-child(2) {
+							margin-right: 534px;
 							@include responsive(xl) {
 								margin-right: 338px;
 							}
 							@include responsive(md) {
 								margin-right: 0;
 							}
-                        }
+						}
 					}
 				}
 			}
 			.body-content {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
-                position: relative;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				position: relative;
 				width: 100%;
 				@include responsive(md) {
 					flex-direction: column;
@@ -67,7 +69,7 @@
 					letter-spacing: -1.92px;
 				}
 				.description-slider {
-                    max-width: 83.3%;
+					max-width: 83.3%;
 					@include responsive(md) {
 						max-width: 100%;
 					}
@@ -132,13 +134,13 @@
 						}
 					}
 				}
-                .wrapper-btn {
+				.wrapper-btn {
 					display: flex;
 					align-items: flex-start;
 					gap: 24px;
-                    position: absolute;
-                    bottom: 0;
-                    right: 248px;
+					position: absolute;
+					bottom: 0;
+					right: 248px;
 					@include responsive(xl) {
 						right: 0;
 					}
