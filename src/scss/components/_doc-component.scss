@@ -49,6 +49,7 @@
     font-weight: 500;
     background-color: $primary;
     cursor: pointer;
+    transition: all 300ms ease;
     &:hover {
         background-color: $white;
     }
