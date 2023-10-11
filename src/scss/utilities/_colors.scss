@@ -1,0 +1,23 @@
+$primary: #1f1f1f;
+// $secondary: #152632;
+
+$white: #ffffff;
+
+$display: $primary;
+
+.text-primary {
+	color: $primary;
+	font-style: italic;
+	font-weight: 600;
+}
+// .text-secondary {
+//     color: rgba(255, 255, 255, 0.50);
+// }
+
+.bg-dark {
+	background-color: $primary;
+}
+
+body {
+	color: $primary;
+}

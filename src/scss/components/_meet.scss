@@ -1,0 +1,73 @@
+.section-meet {
+	.container {
+		&-meet {
+            padding-block: 64px;
+			flex-direction: column;
+			align-items: center;
+			gap: 64px;
+			@include responsive(md) {
+				gap: 32px;
+			}
+			@include responsive(sm) {
+				padding-block: 32px;
+			}
+			.head-content {
+				.subtext-text {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 64px;
+					@include responsive(md) {
+						gap: 32px;
+					}
+					@include responsive(sm) {
+						gap: 16px;
+					}
+					&-display {
+						color: #1f1f1f;
+						text-align: center;
+						font-family: $font-display;
+						font-size: 144px;
+						font-weight: 400;
+						line-height: 100%; /* 144px */
+						letter-spacing: -4.32px;
+						@include responsive(xl) {
+							font-size: 82px;
+						}
+						@include responsive(sm) {
+							font-size: 52px;
+							letter-spacing: -2.32px;
+						}
+					}
+					&-desc {
+						color: #1f1f1f;
+						text-align: center;
+						font-family: $font-body;
+						font-size: 24px;
+						font-weight: 500;
+						line-height: 130%; /* 31.2px */
+						letter-spacing: -0.72px;
+						max-width: 650px;
+						@include responsive(xl) {
+							font-size: 20px;
+						}
+						@include responsive(sm) {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+			.body-content {
+                display: flex;
+                align-items: flex-start;
+                gap: 21px;
+				@include responsive(md) {
+					flex-direction: column;
+				}
+				.subtext-image {
+                    display: inline-flex;
+				}
+			}
+		}
+	}
+}

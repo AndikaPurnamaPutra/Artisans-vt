@@ -1,0 +1,53 @@
+.footer {
+    margin-block: -1px;
+	.container {
+		&-footer {
+            padding-block: 30px;
+			.content {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+                width: 100%;
+				@include responsive(sm) {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 32px;
+				}
+				&-copyright {
+					color: #fff;
+					font-family: $font-body;
+					font-size: 24px;
+					font-weight: 500;
+					line-height: 130%; /* 31.2px */
+					letter-spacing: -0.72px;
+					@include responsive(xl) {
+						font-size: 20px;
+					}
+				}
+				&-text {
+					display: flex;
+					align-items: flex-start;
+					gap: 48px;
+					@include responsive(md) {
+						gap: 24px;
+					}
+					@include responsive(sm) {
+						justify-content: space-between;
+						width: 100%;
+					}
+					.nav-link {
+						color: #fff;
+						font-family: $font-body;
+						font-size: 24px;
+						font-weight: 500;
+						line-height: 130%; /* 31.2px */
+						letter-spacing: -0.72px;
+						@include responsive(xl) {
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

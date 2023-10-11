@@ -1,0 +1,49 @@
+.section-banner {
+	.container {
+		&-banner {
+            padding-block: 64px;
+			@include responsive(sm) {
+				padding-block: 32px;
+			}
+			.subtext {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+				align-items: flex-start;
+				@include responsive(md) {
+					flex-direction: column;
+					gap: 16px;
+				}
+				&-text {
+					&-display {
+						color: #1f1f1f;
+						font-family: $font-body;
+						font-size: 24px;
+						font-weight: 700;
+						line-height: 130%; /* 31.2px */
+						letter-spacing: -0.72px;
+						@include responsive(sm) {
+							font-size: 20px;
+						}
+					}
+					&-desc {
+						color: #1f1f1f;
+						font-family: $font-body;
+						font-size: 24px;
+						font-weight: 500;
+						line-height: 130%; /* 31.2px */
+						letter-spacing: -0.72px;
+                        width: 776px;
+						@include responsive(xl) {
+							width: 642px;
+						}
+						@include responsive(sm) {
+							font-size: 20px;
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

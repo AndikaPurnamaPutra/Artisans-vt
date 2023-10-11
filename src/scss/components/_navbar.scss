@@ -1,0 +1,102 @@
+.navbar {
+	position: sticky;
+    top: 0;
+    z-index: 99;
+	background-color: $white;
+	.container {
+		&-nav {
+			padding-block: 30px;
+			position: relative;
+			@include responsive(md) {
+				padding-block: 24px;
+			}
+			.nav {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+				align-items: center;
+				&-logo {
+					color: #1f1f1f;
+					font-family: $font-display;
+					font-size: 32px;
+					font-weight: 400;
+					line-height: 120%; /* 38.4px */
+					letter-spacing: -0.96px;
+					@include responsive(sm) {
+						font-size: 28px;
+					}
+				}
+				&-menu {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					gap: 48px;
+					.nav-link {
+						color: #1f1f1f;
+						font-family: $font-body;
+						font-size: 20px;
+						font-weight: 500;
+						line-height: 120%; /* 24px */
+						letter-spacing: -0.6px;
+						transition: all 300ms ease;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+					@include responsive(md) {
+						position: absolute;
+						top: 100%;
+						left: 50%;
+						transform: translate(-50%, 0);
+						width: 100%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						margin: 0 auto;
+						background-color: $white;
+						text-align: center;
+						transition: all 500ms ease;
+						height: 0;
+						overflow: hidden;
+						.nav-link {
+							opacity: 0;
+						}
+						&.active {
+                            height: 100vh !important;
+                            // padding: 40px;
+                            .nav-link {
+                                opacity: 1;
+                            }
+                        }
+					}
+				}
+				&-btn-responsive {
+					display: block;
+					background-image: url("../../../assets/image/menu-black.svg");
+					background-repeat: no-repeat;
+					background-size: 24px 24px;
+					width: 24px;
+					height: 24px;
+					border: transparent;
+					background-color: transparent;
+					transition: all 100ms ease;
+					@include responsive(xl) {
+						display: block;
+						z-index: 3;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include responsive(md) {
+	.cross {
+		background-image: url("../../../assets/image/cross-black.svg") !important;
+		background-repeat: no-repeat;
+		background-size: 24px 24px;
+		width: 24px;
+		height: 24px;
+	}
+}

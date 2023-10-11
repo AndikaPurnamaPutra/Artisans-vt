@@ -1,0 +1,69 @@
+.section-header {
+	.container {
+		&-header {
+			padding-top: 56px;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 64px;
+			@include responsive(sm) {
+				gap: 32px;
+				padding-top: 32px;
+			}
+			.head-content {
+                width: 100%;
+				.subtext {
+					display: flex;
+					justify-content: space-between;
+					align-items: flex-end;
+					@include responsive(md) {
+						flex-direction: column;
+						align-items: flex-start;
+						gap: 32px;
+					}
+					@include responsive(sm) {
+						gap: 16px;
+					}
+					&-text {
+						&-display {
+							color: #1f1f1f;
+							font-family: $font-display;
+							font-size: 144px;
+							font-weight: 400;
+							line-height: 100%; /* 144px */
+							letter-spacing: -4.32px;
+							@include responsive(xl) {
+								font-size: 82px;
+							}
+							@include responsive(sm) {
+								font-size: 52px;
+								line-height: 105%;
+								letter-spacing: -3.32px;
+							}
+						}
+						&-desc {
+							color: #1f1f1f;
+							font-family: $font-body;
+							font-size: 20px;
+							font-weight: 500;
+							line-height: 130%; /* 26px */
+							letter-spacing: -0.6px;
+							width: 352px;
+							@include responsive(md) {
+								width: 75%;
+							}
+							@include responsive(sm) {
+								width: 100%;
+								font-size: 18px;
+							}
+						}
+					}
+				}
+			}
+			.body-content {
+				.subtext-image {
+					display: flex;
+				}
+			}
+		}
+	}
+}
