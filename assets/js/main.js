@@ -14,14 +14,13 @@ const btnRes = document.querySelector(".nav-btn-responsive");
 const menu = document.querySelector(".nav-menu");
 
 btnRes.addEventListener("click", () => {
-    menu.classList.toggle("active");
-    btnRes.classList.toggle("cross");
-    navbar.classList.toggle("active");
+	menu.classList.toggle("active");
+	btnRes.classList.toggle("cross");
+	navbar.classList.toggle("active");
 });
 
 // Slick
 $(document).ready(function () {
-	// Inisialisasi slider untuk "Art"
 	$(".art-slider").slick({
 		variableWidth: true,
 		autoplay: true,
