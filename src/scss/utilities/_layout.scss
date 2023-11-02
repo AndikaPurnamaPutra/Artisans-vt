@@ -44,9 +44,6 @@ section {
 		@include responsive(md) {
 			margin-left: unset;
 		}
-		@include responsive(sm) {
-			margin-left: unset;
-		}
 	}
 	@include responsive(xl) {
 		padding: 0 40px;
