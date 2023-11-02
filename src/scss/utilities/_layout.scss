@@ -2,17 +2,17 @@
 $grid-columns: 12;
 
 @for $i from 1 through $grid-columns {
-    .grid-#{$i} {
-        width: calc($i / $grid-columns) * 100%;
-    }
+	.grid-#{$i} {
+		width: calc($i / $grid-columns) * 100%;
+	}
 }
 // example to html
 // .grid-6 for 50%
 // .grid-12 for 100%
 [class^="grid-"] {
-    @include responsive(md) {
-        width: 100% !important;
-    }
+	@include responsive(md) {
+		width: 100% !important;
+	}
 }
 
 // .bg-dark {
@@ -21,27 +21,38 @@ $grid-columns: 12;
 
 // layout for display
 section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
 }
 
 .container {
-    max-width: 1440px;
-    width: 100%;
-    padding: 0 48px;
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    &-fluid {
-        padding: unset !important;
-    }
-    @include responsive(xl) {
-        padding: 0 40px;
-    }
-    @include responsive(md) {
-        padding: 0 20px;
-        flex-direction: column;
-    }
+	max-width: 1440px;
+	width: 100%;
+	padding: 0 48px;
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+	&-fluid {
+        width: 100%;
+		display: flex;
+		flex-direction: row;
+		margin-left: calc((100% - 1440px + 48px * 2) / 2);
+		@include responsive(xl) {
+			margin-left: calc((100% - 1024px + 40px * 2) / 2);
+		}
+		@include responsive(md) {
+			margin-left: unset;
+		}
+		@include responsive(sm) {
+			margin-left: unset;
+		}
+	}
+	@include responsive(xl) {
+		padding: 0 40px;
+	}
+	@include responsive(md) {
+		padding: 0 20px;
+		flex-direction: column;
+	}
 }

@@ -1,16 +1,17 @@
 .section-description {
-	flex-direction: column;
 	padding-block: 64px;
-	gap: 56px;
 	@include responsive(sm) {
 		padding-block: 32px;
-		gap: 32px;
 	}
 	.container {
 		&-description {
-			flex-direction: column;
 			.head-content {
+				width: 100%;
 				border-bottom: 1px solid #ffffff;
+				margin-bottom: 56px;
+				@include responsive(sm) {
+					margin-bottom: 32px;
+				}
 				.subtext-text {
 					display: flex;
 					align-items: flex-start;
@@ -28,9 +29,9 @@
 						line-height: 130%; /* 31.2px */
 						letter-spacing: -0.72px;
 						&:nth-child(1) {
-							margin-right: 180px;
+							margin-right: 192px;
 							@include responsive(xl) {
-								margin-right: 115px	;
+								margin-right: 122px;
 							}
 							@include responsive(md) {
 								margin-right: 0;
@@ -50,115 +51,118 @@
 			}
 		}
 	}
-	.body-content {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		position: relative;
-		width: 100%;
-		padding-left: 48px;
-		max-width: 1440px;
-		margin: auto;
-		@include responsive(md) {
+	.container-fluid {
+		&-description {
 			flex-direction: column;
-			gap: 32px;
-			padding-inline: 20px;
-		}
-		@include responsive(sm) {
-			gap: 24px;
-		}
-		.subtitle {
-			color: #fff;
-			font-family: $font-body;
-			font-size: 64px;
-			font-weight: 500;
-			line-height: 130%; /* 83.2px */
-			letter-spacing: -1.92px;
-		}
-		.description-slider {
-			max-width: 83.3%;
-			@include responsive(md) {
-				max-width: 100%;
-			}
-			.slick-track {
+			.body-content {
 				display: flex;
-				gap: 32px;
-				@include responsive(sm) {
-					gap: 20px;
-				}
-			}
-			.slide {
-				display: flex;
+				justify-content: space-between;
 				align-items: flex-start;
-				gap: 20px;
-				@include responsive(sm) {
-					flex-direction: column;
-				}
-				&-image {
-					max-width: 549px;
-					@include responsive(xl) {
-						max-width: 354px;
-					}
-					@include responsive(sm) {
-						max-width: 334px;
-					}
-				}
-				&-text {
-					display: flex;
-					flex-direction: column;
-					align-items: flex-start;
-					gap: 24px;
-					@include responsive(md) {
-						gap: 16px;
-					}
-					&-subtitle {
-						color: #fff;
-						font-family: $font-body;
-						font-size: 32px;
-						font-weight: 700;
-						line-height: 130%; /* 41.6px */
-						letter-spacing: -0.96px;
-						@include responsive(xl) {
-							font-size: 24px;
-						}
-					}
-					&-desc {
-						color: #fff;
-						font-family: $font-body;
-						font-size: 24px;
-						font-weight: 500;
-						line-height: 130%; /* 31.2px */
-						letter-spacing: -0.72px;
-						max-width: 399px;
-						@include responsive(xl) {
-							max-width: 380px;
-						}
-						@include responsive(md) {
-							font-size: 18px;
-							max-width: 338px;
-						}
-					}
-				}
-			}
-		}
-		.wrapper-btn {
-			display: flex;
-			align-items: flex-start;
-			gap: 24px;
-			position: absolute;
-			bottom: 0;
-			right: 248px;
-			@include responsive(xl) {
-				right: 48px;
-			}
-			@include responsive(md) {
-				right: 20px;
-			}
-			@include responsive(sm) {
 				position: relative;
 				width: 100%;
-				justify-content: space-between;
-				right: 0;
+				margin: auto;
+				@include responsive(md) {
+					flex-direction: column;
+					gap: 32px;
+					padding-inline: 20px;
+				}
+				@include responsive(sm) {
+					gap: 24px;
+				}
+				.subtitle {
+					color: #fff;
+					font-family: $font-body;
+					font-size: 64px;
+					font-weight: 500;
+					line-height: 130%; /* 83.2px */
+					letter-spacing: -1.92px;
+				}
+				.description-slider {
+					max-width: 83.3%;
+					@include responsive(md) {
+						max-width: 100%;
+					}
+					.slick-track {
+						display: flex;
+						gap: 32px;
+						@include responsive(sm) {
+							gap: 20px;
+						}
+					}
+					.slide {
+						display: flex;
+						align-items: flex-start;
+						gap: 20px;
+						@include responsive(sm) {
+							flex-direction: column;
+						}
+						&-image {
+							max-width: 549px;
+							@include responsive(xl) {
+								max-width: 354px;
+							}
+							@include responsive(sm) {
+								max-width: 334px;
+							}
+						}
+						&-text {
+							display: flex;
+							flex-direction: column;
+							align-items: flex-start;
+							gap: 24px;
+							@include responsive(md) {
+								gap: 16px;
+							}
+							&-subtitle {
+								color: #fff;
+								font-family: $font-body;
+								font-size: 32px;
+								font-weight: 700;
+								line-height: 130%; /* 41.6px */
+								letter-spacing: -0.96px;
+								@include responsive(xl) {
+									font-size: 24px;
+								}
+							}
+							&-desc {
+								color: #fff;
+								font-family: $font-body;
+								font-size: 24px;
+								font-weight: 500;
+								line-height: 130%; /* 31.2px */
+								letter-spacing: -0.72px;
+								max-width: 399px;
+								@include responsive(xl) {
+									max-width: 380px;
+								}
+								@include responsive(md) {
+									font-size: 18px;
+									max-width: 338px;
+								}
+							}
+						}
+					}
+				}
+				.wrapper-btn {
+					display: flex;
+					align-items: flex-start;
+					gap: 24px;
+					position: absolute;
+					bottom: 0;
+					right: 248px;
+					@include responsive(xl) {
+						right: 220px;
+					}
+					@include responsive(md) {
+						right: 20px;
+					}
+					@include responsive(sm) {
+						position: relative;
+						width: 100%;
+						justify-content: space-between;
+						right: 0;
+					}
+				}
 			}
 		}
 	}

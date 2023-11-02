@@ -1,141 +1,13 @@
-// .section-art {
-// 	.container {
-// 		&-art {
-// 			gap: 121px;
-// 			padding-block: 56px;
-//             @include responsive(xl) {
-//                 gap: 68px;
-//             }
-//             @include responsive(md) {
-//                 gap: 34px;
-//             }
-//             @include responsive(sm) {
-//                 padding-block: 32px;
-//             }
-// 			.head-content {
-// 				// width: 50%;
-// 				display: flex;
-// 				flex-direction: column;
-// 				justify-content: space-between;
-// 				align-items: flex-start;
-//                 @include responsive(md) {
-//                     width: 100%;
-//                     gap: 32px;
-//                 }
-// 				.subtext-text {
-// 					display: flex;
-// 					flex-direction: column;
-// 					align-items: flex-start;
-// 					gap: 24px;
-//                     @include responsive(sm) {
-//                         gap: 16px;
-//                     }
-// 					&-display {
-// 						color: #fff;
-// 						font-family: $font-body;
-// 						font-size: 32px;
-// 						font-weight: 700;
-// 						line-height: 130%; /* 41.6px */
-// 						letter-spacing: -0.96px;
-//                         @include responsive(md) {
-//                             font-size: 28px;
-//                         }
-// 					}
-// 					&-desc {
-// 						color: #fff;
-// 						font-family: $font-body;
-// 						font-size: 24px;
-// 						font-weight: 500;
-// 						line-height: 130%; /* 31.2px */
-// 						letter-spacing: -0.72px;
-//                         @include responsive(md) {
-//                             font-size: 20px;
-//                         }
-// 					}
-// 				}
-// 				.wrapper-btn {
-// 					display: flex;
-// 					align-items: flex-start;
-// 					gap: 24px;
-//                     @include responsive(md) {
-//                         justify-content: space-between;
-//                         width: 100%;
-//                     }
-// 				}
-// 			}
-// 			.body-content {
-// 				width: 50%;
-//                 @include responsive(md) {
-//                     width: 100%;
-//                 }
-// 				.slide {
-// 					display: flex;
-// 					flex-direction: column;
-// 					align-items: flex-start;
-// 					gap: 24px;
-// 					max-width: 400px;
-// 					margin-inline: 20px;
-//                     @include responsive(sm) {
-//                         max-width: 324px;
-//                         gap: 20px;
-//                     }
-// 					&-text {
-// 						display: flex;
-// 						align-items: flex-start;
-// 						justify-content: space-between;
-// 						width: 100%;
-// 						gap: 20px;
-//                         @include responsive(sm) {
-//                             flex-direction: column;
-//                             gap: 12px;
-//                         }
-// 						&-subtitle {
-// 							color: #fff;
-// 							font-family: $font-body;
-// 							font-size: 16px;
-// 							font-weight: 700;
-// 							line-height: 130%; /* 20.8px */
-// 							letter-spacing: -0.48px;
-// 						}
-// 						&-desc {
-// 							color: #fff;
-// 							font-family: $font-body;
-// 							font-size: 16px;
-// 							font-weight: 500;
-// 							line-height: 130%; /* 20.8px */
-// 							letter-spacing: -0.48px;
-// 							width: 207px;
-//                             @include responsive(sm) {
-//                                 width: 100%;
-//                             }
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
 .section-art {
-	max-width: 1440px;
-	justify-content: space-between;
-	margin: auto;
-	gap: 121px;
 	padding-block: 56px;
-	@include responsive(xl) {
-		gap: 60px;
-	}
-	@include responsive(md) {
-		flex-direction: column;
-	}
-	.container {
+	.container-fluid {
 		&-art {
-			margin: 0;
-			padding-right: 0;
+			gap: 121px;
 			@include responsive(md) {
-				padding-right: 20px;
+				flex-direction: column;
 			}
 			.head-content {
+				width: 50%;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
@@ -143,6 +15,7 @@
 				@include responsive(md) {
 					width: 100%;
 					gap: 32px;
+					padding-inline: 20px;
 				}
 				.subtext-text {
 					display: flex;
@@ -185,55 +58,65 @@
 					}
 				}
 			}
-		}
-	}
-	.body-content {
-		width: 50%;
-		@include responsive(md) {
-			width: 100%;
-		}
-		.slide {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 24px;
-			max-width: 400px;
-			margin-inline: 20px;
-			@include responsive(sm) {
-				max-width: 324px;
-				gap: 20px;
-			}
-			&-text {
-				display: flex;
-				align-items: flex-start;
-				justify-content: space-between;
-				width: 100%;
-				gap: 20px;
+			.body-content {
+				width: 50%;
+				@include responsive(md) {
+					width: 100%;
+					padding-left: 20px;
+				}
 				@include responsive(sm) {
+					padding-left: unset;
+				}
+				.slick-track {
+					display:  flex !important;
+					gap: 40px;
+				}
+				.slide {
+					display: flex;
 					flex-direction: column;
-					gap: 12px;
-				}
-				&-subtitle {
-					color: #fff;
-					font-family: $font-body;
-					font-size: 16px;
-					font-weight: 700;
-					line-height: 130%; /* 20.8px */
-					letter-spacing: -0.48px;
-				}
-				&-desc {
-					color: #fff;
-					font-family: $font-body;
-					font-size: 16px;
-					font-weight: 500;
-					line-height: 130%; /* 20.8px */
-					letter-spacing: -0.48px;
-					width: 207px;
+					align-items: flex-start;
+					gap: 24px;
+					max-width: 400px;
+					// margin-inline: 20px;
 					@include responsive(sm) {
+						max-width: 324px;
+						gap: 20px;
+					}
+					&-text {
+						display: flex;
+						align-items: flex-start;
+						justify-content: space-between;
 						width: 100%;
+						gap: 20px;
+						@include responsive(sm) {
+							flex-direction: column;
+							gap: 12px;
+						}
+						&-subtitle {
+							color: #fff;
+							font-family: $font-body;
+							font-size: 16px;
+							font-weight: 700;
+							line-height: 130%; /* 20.8px */
+							letter-spacing: -0.48px;
+						}
+						&-desc {
+							color: #fff;
+							font-family: $font-body;
+							font-size: 16px;
+							font-weight: 500;
+							line-height: 130%; /* 20.8px */
+							letter-spacing: -0.48px;
+							width: 207px;
+							@include responsive(sm) {
+								width: 100%;
+							}
+						}
 					}
 				}
 			}
 		}
 	}
 }
+
+
